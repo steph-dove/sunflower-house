@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Seattle!</title>
+<style>
+  :root {
+    --accent: #d97706;
+    --accent-soft: #fef3c7;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --bg: #fffdf8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.65;
+  }
+  header {
+    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+    color: white;
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  header p {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.95;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  section {
+    margin-bottom: 2.5rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent-soft);
+    padding-bottom: 0.4rem;
+    margin: 2.5rem 0 1rem;
+  }
+  h3 {
+    font-size: 1.15rem;
+    margin: 1.25rem 0 0.5rem;
+    color: var(--text);
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .info-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+  }
+  .info-card .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .info-card .value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+    word-break: break-word;
+  }
+  ul { padding-left: 1.25rem; }
+  ul li { margin-bottom: 0.4rem; }
+  .place {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.6rem;
+  }
+  .place strong { color: var(--accent); }
+  .icons {
+    display: inline-flex;
+    gap: 0.35rem;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+  .icons span {
+    font-size: 0.95rem;
+    line-height: 1;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.85rem 1.1rem;
+    margin: 1rem 0 1.25rem;
+    font-size: 0.92rem;
+  }
+  .legend span.item { display: inline-flex; align-items: center; gap: 0.4rem; }
+  .callout {
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+  }
+  nav.toc {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+  }
+  nav.toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.4rem;
+  }
+  nav.toc a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  nav.toc a:hover { text-decoration: underline; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Seattle!</h1>
+  <p>I hope you enjoy your stay! I'm happy to answer any questions you have. I know Seattle well and can be used as a concierge.</p>
+</header>
+
+<main>
+
+<nav class="toc">
+  <ul>
+    <li><a href="#stay">Your Stay</a></li>
+    <li><a href="#entering">Entering</a></li>
+    <li><a href="#wifi">Parking</a></li>
+    <li><a href="#airport">Airport</a></li>
+    <li><a href="#rules">House Rules</a></li>
+    <li><a href="#amenities">Amenities</a></li>
+    <li><a href="#checkout">Check Out</a></li>
+    <li><a href="#restaurants">Restaurants</a></li>
+    <li><a href="#nightlife">Nightlife</a></li>
+    <li><a href="#sports">Sports</a></li>
+    <li><a href="#outdoor">Outdoor</a></li>
+    <li><a href="#shopping">Shopping</a></li>
+    <li><a href="#daily">Daily Needs</a></li>
+  </ul>
+</nav>
+
+<section id="stay">
+  <h2>Your Stay</h2>
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="label">Check-in</div>
+      <div class="value">3:00 PM</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Check-out</div>
+      <div class="value">12:00 AM</div>
+    </div>
+  </div>
+</section>
+
+<section id="entering">
+  <h2>Entering</h2>
+  <p>You'll be given a passcode you can use to unlock the front door during your stay.</p>
+  <p>The first door you'll see is a white door with a large flower design. This is an unlocked security door. Go through this door and you'll be in the entrance and see the front door.</p>
+  <p>The front door has a keycode lock. Wave your hand in front of it for the numbers to show up. Type in your code and then tap the area where the lock icon is on the keypad.</p>
+  <div class="callout">
+    <strong>To lock the door when you leave:</strong> tap the lock icon twice.
+  </div>
+</section>
+
+<section id="wifi">
+  <h2>Parking</h2>
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="label">Parking</div>
+      <div class="value">1 Zone 4 pass provided</div>
+    </div>
+  </div>
+</section>
+
+<section id="airport">
+  <h2>Getting to / from the Airport</h2>
+  <p>The easiest option is the <strong>light rail</strong> 🚊 — take it from <strong>SeaTac Airport</strong> straight to the <strong>Capitol Hill</strong> stop.</p>
+</section>
+
+<section id="rules">
+  <h2>House Rules</h2>
+  <p>I would really appreciate it if you could follow the house rules:</p>
+  <ul>
+    <li>First and foremost, enjoy your stay.</li>
+    <li>I hope you enjoy the ambiance. I'm sure you'll do your best to preserve it.</li>
+    <li>No smoking inside, but you may smoke outside on the roof deck.</li>
+    <li>Our neighbors are nice people — please keep the noise level low.</li>
+  </ul>
+</section>
+
+<section id="amenities">
+  <h2>Amenities</h2>
+
+  <h3>Shared Areas</h3>
+  <p>You have access to the rooftop deck and the kitchen.</p>
+
+  <h3>Heating / Air Conditioning</h3>
+  <p>You can adjust the temperature using one of the two remotes. Set it to heat or cool by setting the icon to snowflake or sun. Use the up and down arrows to adjust. Although there are two heaters, they both have to be at the same hot/cold setting.</p>
+
+  <h3>Laundry</h3>
+  <p>You also have access to the washer and dryer on the second floor.</p>
+</section>
+
+<section id="checkout">
+  <h2>Check Out</h2>
+  <p>Please make sure all trash is in the trash can and towels are gathered in one pile.</p>
+</section>
+
+<section id="restaurants">
+  <h2>Recommended Restaurants</h2>
+
+  <div class="legend">
+    <span class="item">🚶 Walkable</span>
+    <span class="item">🚊 Light rail</span>
+    <span class="item">🚗 Car / Uber</span>
+    <span class="item">🥡 Order-in</span>
+  </div>
+
+  <h3>Thai</h3>
+  <div class="place"><strong>Noi Thai</strong> <span class="icons"><span title="Car/Uber">🚗</span><span title="Order-in">🥡</span></span> — try their panang curry, pineapple fried rice, and garlic chicken.</div>
+
+  <h3>Pho</h3>
+  <div class="place"><strong>Venison Pho</strong> <span class="icons"><span title="Car/Uber">🚗</span><span title="Order-in">🥡</span></span> — try their beef brisket pho.</div>
+
+  <h3>Dumplings</h3>
+  <div class="place"><strong>Din Tai Fung</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — the most famous dumpling place in Seattle. A little pricey and may require a reservation.</div>
+
+  <h3>Tacos</h3>
+  <div class="place"><strong>Tacos Chukis</strong> <span class="icons"><span title="Walkable">🚶</span></span> — street style tacos, simple and delicious, best with a beer and friends.</div>
+  <div class="place"><strong>Carmelo's Tacos</strong> <span class="icons"><span title="Order-in">🥡</span></span> — perfect for delivery.</div>
+  <div class="place"><strong>Rocket Tacos</strong> <span class="icons"><span title="Walkable">🚶</span></span> — street tacos in a quieter part of Seattle, walkable. Best choice for a good margarita.</div>
+
+  <h3>American</h3>
+  <div class="place"><strong>Dick's Drive In</strong> <span class="icons"><span title="Walkable">🚶</span></span> — a historic burger joint. Low cost; one is on Broadway.</div>
+
+  <h3>Fancy</h3>
+  <div class="place"><strong>MBar</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> (South Lake Union) — about $200 for two, but you'll dine atop a high-rise with a view of Lake Union. Outdoor space with heaters and blankets. Reservation needed.</div>
+
+  <h3>Breakfast</h3>
+  <div class="place"><strong>Portage Bay Cafe</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — reservation required. The most popular brunch in Seattle.</div>
+  <div class="place"><strong>Lost Lake Cafe and Lounge</strong> <span class="icons"><span title="Walkable">🚶</span></span> — traditional breakfast, pretty good. Bonus for being in Cap Hill.</div>
+
+  <h3>Desserts</h3>
+  <div class="place"><strong>Hello Robin</strong> <span class="icons"><span title="Walkable">🚶</span></span> — ice cream sandwiches with artisan ice cream and fresh-baked cookies.</div>
+  <div class="place"><strong>Midnight Cookie Co</strong> <span class="icons"><span title="Order-in">🥡</span></span> — the only dessert place that delivers late at night.</div>
+  <div class="place"><strong>Cinnaholic</strong> <span class="icons"><span title="Order-in">🥡</span></span> — cinnamon rolls with all the toppings.</div>
+  <div class="place"><strong>Hot Cakes</strong> <span class="icons"><span title="Walkable">🚶</span></span> — molten chocolate cakes with ice cream. Also has the best grilled cheese with tomato soup. Various dietary options.</div>
+  <div class="place"><strong>Molly Moon</strong> <span class="icons"><span title="Walkable">🚶</span></span> — artisan ice cream.</div>
+  <div class="place"><strong>Salt and Straw</strong> <span class="icons"><span title="Walkable">🚶</span></span> — artisan ice cream.</div>
+  <div class="place"><strong>Frankie &amp; Jo's</strong> <span class="icons"><span title="Walkable">🚶</span></span> — vegan artisan ice cream.</div>
+
+  <h3>Coffee Shops</h3>
+  <div class="place"><strong>Volunteer Park Cafe</strong> <span class="icons"><span title="Walkable">🚶</span></span> — good coffee and food, cute homey atmosphere. Walk down 17th Ave E into the quiet neighborhood, stop for coffee, then stroll through Volunteer Park.</div>
+  <div class="place"><strong>Bakery Nouveau</strong> <span class="icons"><span title="Walkable">🚶</span></span> — French bakery with pastries, sandwiches, and basic coffee. Grab food and head to the roof deck.</div>
+  <div class="place"><strong>Nuflours Bakery</strong> <span class="icons"><span title="Walkable">🚶</span></span> — gluten-free bakery, so good I didn't realize it was gluten-free! Unique artisan baked goods.</div>
+  <div class="place"><strong>Ada's Technical Books</strong> <span class="icons"><span title="Walkable">🚶</span></span> — technical bookstore and coffee shop on 15th. Coffee, treats, books, and brain teasers.</div>
+  <div class="place"><strong>Victrola Coffee &amp; Cafe Ladro</strong> <span class="icons"><span title="Walkable">🚶</span></span> — both decent, what you'd typically expect.</div>
+  <div class="place"><strong>Overcast Coffee Co</strong> <span class="icons"><span title="Walkable">🚶</span></span> — accessed from the street, also part of the medical center on 15th. Great sandwiches and friendly people.</div>
+</section>
+
+<section id="nightlife">
+  <h2>Entertainment &amp; Nightlife</h2>
+
+  <h3>Things to Do at Least Once</h3>
+  <div class="place"><strong>Space Needle and Big Wheel</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — 'nuff said.</div>
+  <div class="place"><strong>Columbia Tower Observatory</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — Seattle's tallest building.</div>
+  <div class="place"><strong>Pike Place Market</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — multi-story market.</div>
+  <div class="place"><strong>Woodland Park Zoo &amp; Seattle Aquarium</strong> <span class="icons"><span title="Car/Uber">🚗</span></span></div>
+  <div class="place"><strong>Bainbridge Island</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — take the ferry; the ride itself is an experience and Bainbridge has a cute downtown.</div>
+
+  <h3>Karaoke</h3>
+  <div class="place"><strong>RockBox</strong> <span class="icons"><span title="Walkable">🚶</span></span> — go-to for karaoke rooms; popular songs, Capitol Hill nightlife, good drinks.</div>
+  <div class="place"><strong>Seattle's Best Karaoke (SBK)</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — best sound system; bring your own drinks/snacks; sing anything from YouTube.</div>
+  <div class="place"><strong>Crescent Lounge</strong> <span class="icons"><span title="Walkable">🚶</span></span> — Seattle's oldest straight-friendly gay karaoke bar. Lively crowd, mixed talent.</div>
+  <div class="place"><strong>Hula Hula</strong> <span class="icons"><span title="Walkable">🚶</span></span> — similar to Crescent Lounge but larger. Very lively. Close enough to try both.</div>
+
+  <h3>Dancing</h3>
+  <div class="place"><strong>Havana</strong> <span class="icons"><span title="Walkable">🚶</span></span> — Hip Hop, packed, great dancing.</div>
+  <div class="place"><strong>Kremwerk</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — industrial music.</div>
+  <div class="place"><strong>Chop Suey</strong> <span class="icons"><span title="Walkable">🚶</span></span> — Hip Hop, Alt Rock, Pop (check website for schedule).</div>
+  <div class="place"><strong>Neighbors</strong> <span class="icons"><span title="Walkable">🚶</span></span> — only club open until 4am. LGBTQ+ club.</div>
+  <div class="place"><strong>Sarajevo</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — Latin and Hip Hop.</div>
+  <div class="place"><strong>ELAV8</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — Latin and Hip Hop. Both Latin clubs are in Belltown — visit both in one night.</div>
+
+  <h3>Drinks +</h3>
+  <div class="place"><strong>Hopvine Pub</strong> <span class="icons"><span title="Walkable">🚶</span></span> — small pub on 15th; live music, open mic, comedy nights.</div>
+  <div class="place"><strong>Mox Boarding House</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — pub and game shop; great for board game nights.</div>
+  <div class="place"><strong>Pie Bar</strong> <span class="icons"><span title="Walkable">🚶</span></span> — cute hole-in-the-wall cocktail bar with pies made on site.</div>
+  <div class="place"><strong>Bathtub Gin and Co.</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — accessed from an alley, Seattle's best-kept secret cocktail bar.</div>
+  <div class="place"><strong>Elysian Brewery</strong> <span class="icons"><span title="Walkable">🚶</span></span> — famous Seattle brewery.</div>
+  <div class="place"><strong>Redhook Brewery</strong> <span class="icons"><span title="Walkable">🚶</span></span> — lots of outdoor seating, perfect on a hot day.</div>
+</section>
+
+<section id="sports">
+  <h2>Sports Events</h2>
+  <div class="place"><strong>Lumen Field</strong> <span class="icons"><span title="Light rail">🚊</span></span> — Seahawks (NFL) and Sounders (MLS).</div>
+  <div class="place"><strong>T-Mobile Park</strong> <span class="icons"><span title="Light rail">🚊</span></span> — Mariners (MLB).</div>
+  <div class="place"><strong>Climate Pledge Arena</strong> <span class="icons"><span title="Light rail">🚊</span></span> — Kraken (NHL) and Storm (WNBA).</div>
+  <div class="place"><strong>Husky Stadium</strong> <span class="icons"><span title="Light rail">🚊</span></span> — UW Huskies football and other UW athletics.</div>
+</section>
+
+<section id="outdoor">
+  <h2>Outdoor</h2>
+  <div class="place"><strong>Kayaking on Lake Union</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — rent a kayak and check out the boat houses.</div>
+  <div class="place"><strong>Greenlake</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — nice walk with restaurants nearby.</div>
+  <div class="place"><strong>Volunteer Park</strong> <span class="icons"><span title="Walkable">🚶</span></span> — large well-kept park, plus the Asian Arts Museum, an old water tower observation deck, a conservatory, and Bruce Lee's grave.</div>
+  <div class="place"><strong>Bruce Lee's Grave</strong> <span class="icons"><span title="Walkable">🚶</span></span> — in a cemetery next to Volunteer Park. Especially nice in spring during cherry blossom bloom.</div>
+  <div class="place"><strong>UW &amp; UW Cherry Blossoms</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — beautiful campus and historic buildings. Famous cherry blossoms in spring.</div>
+  <div class="place"><strong>Gas Works Park</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — featured in <em>10 Things I Hate About You</em>. Decent view of downtown.</div>
+  <div class="place"><strong>Alki Beach</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — sandy beach in West Seattle (need a car). Bonfires, beach volleyball, rollerblading.</div>
+</section>
+
+<section id="shopping">
+  <h2>Shopping</h2>
+  <div class="place"><strong>University Village</strong> <span class="icons"><span title="Car/Uber">🚗</span></span> — best shopping center in the area. Anthropologie, Aritzia, Tommy Bahama, plus specialty shops and dining. Open air — bring an umbrella if needed.</div>
+  <div class="place"><strong>15th Ave</strong> <span class="icons"><span title="Walkable">🚶</span></span> — a block down, with cute shops worth checking out.</div>
+  <div class="place"><strong>Broadway</strong> <span class="icons"><span title="Walkable">🚶</span></span> — campy and alternative clothing. Check out Trendy Wendy and the NY Exchange.</div>
+</section>
+
+<section id="daily">
+  <h2>Day to Day Needs</h2>
+  <p><em>All within walking distance.</em></p>
+
+  <h3>Grocery</h3>
+  <ul>
+    <li>Safeway — 5 minute walk</li>
+    <li>QFC on Broadway</li>
+    <li>Trader Joe's</li>
+  </ul>
+
+  <h3>General Supplies</h3>
+  <ul>
+    <li>Walgreens</li>
+  </ul>
+
+  <h3>Party Supplies</h3>
+  <ul>
+    <li>The Red Balloon Company</li>
+  </ul>
+
+  <h3>Nail Salon</h3>
+  <ul>
+    <li><strong>Nina's Nails</strong> — one block away; great company and good nail artists.</li>
+    <li><strong>Apollo Nails</strong> — best for large groups.</li>
+  </ul>
+
+  <h3>Hair Salon</h3>
+  <ul>
+    <li><strong>TEXTURE</strong> — best for African hair braiding and textured hair services.</li>
+    <li><strong>The Red Chair Salon</strong> — a good location for cuts and dyes.</li>
+    <li><strong>Rudy's Barbershop</strong> — a barbershop on 15th.</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  Enjoy your stay in Seattle!
+</footer>
+
+</body>
+</html>
